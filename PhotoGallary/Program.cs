@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhotoGallary_Reopsitary.Context;
+using PhotoGallary_Reopsitary.IReops;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhotoGallaryDbContext>(cnn => cnn.UseSqlServer(builder.Configuration.GetValue<string>("SqlConnectionString")));
+builder.Services.AddScoped<IPhotoGallary, PhotoGallary_Reopsitary.Implementation.PhotoGallary>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
