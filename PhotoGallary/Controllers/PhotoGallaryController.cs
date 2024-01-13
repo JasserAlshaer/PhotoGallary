@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PhotoGallary_Reopsitary.DTOs;
 
 namespace PhotoGallary.Controllers
 {
@@ -7,5 +8,13 @@ namespace PhotoGallary.Controllers
     [ApiController]
     public class PhotoGallaryController : ControllerBase
     {
+        #region HttpGet
+        #endregion
+        #region HttpPost
+        #endregion
+        #region HttpPut
+        #endregion
+        #region HttpDelete
+        #endregion
     }
 }

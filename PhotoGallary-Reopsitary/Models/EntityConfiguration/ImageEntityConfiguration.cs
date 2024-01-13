@@ -13,7 +13,8 @@ namespace PhotoGallary_Reopsitary.Models.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhotoGallary_Reopsitary.Models.Entity;
+using PhotoGallary_Reopsitary.Models.EntityConfiguration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace PhotoGallary_Reopsitary.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new UserEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ImageEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new GallaryEntityConfiguration());
+
         }
         public virtual DbSet<User> Users { get; set; }  
         public virtual DbSet<Image> Images { get; set; }
