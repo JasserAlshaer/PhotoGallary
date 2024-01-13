@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PhotoGallary_Reopsitary.DTOs
 {
-    internal class GallaryDTO
+    public class GallaryDTO
     {
+        public ImageDTO ImageDTO { get; set; }
+        public List<UserDTO> UserDTOs { get; set; }
     }
 }

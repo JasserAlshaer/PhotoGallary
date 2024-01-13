@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PhotoGallary_Reopsitary.DTOs
 {
-    internal class UserDTO
+    public class UserDTO
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public int ImageCount { get; set; }
+        public DateTime JoinDate { get; set; }
     }
 }
